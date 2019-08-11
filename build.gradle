@@ -12,8 +12,8 @@ plugins {
     id 'org.openjfx.javafxplugin' version '0.0.7'
 }
 
-sourceCompatibility = 12
-targetCompatibility = 12
+sourceCompatibility = 11
+targetCompatibility = 11
 
 version = '0.0.1'
 group = 'fi.pelam.gradlejavafxhelloworldapp'
@@ -27,3 +27,8 @@ javafx {
 repositories {
     mavenCentral()
 }
+
+//sourceSets.main.resources {
+//    srcDirs = ["src/main/java"]; //assume that your java classes are inside this path
+//    exclude "**/*.java"
+//}
