@@ -23,7 +23,7 @@ public class Main extends Application {
         vBox.getChildren().add(button1);
         vBox.getChildren().add(button2);
 
-        vBox.getStylesheets().add(getClass().getResource("button-styles.css").toExternalForm());
+        vBox.getStylesheets().add(getClass().getResource("/button-styles.css").toExternalForm());
 
 //        vBox.getStylesheets().add("button-styles.css");
 

@@ -17,16 +17,32 @@ targetCompatibility = 11
 
 version = '0.0.1'
 group = 'fi.pelam.gradlejavafxhelloworldapp'
-mainClassName = "$moduleName/fi.pelam.gradlejavafxhelloworldapp.Main"
+
+// ext.moduleName = 'gradlejavafxhelloworld'
+mainClassName = "fi.pelam.gradlejavafxhelloworldapp.ImageViewExperiments"
+
 
 javafx {
     version = "12"
-    modules = [ 'javafx.controls', 'javafx.fxml']
+    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.swing']
 }
 
 repositories {
     mavenCentral()
 }
+
+run {
+    inputs.property('moduleName', moduleName)
+    doFirst {
+        jvmArgs = [
+                '--module-path', classpath.asPath,
+                '--patch-module', "$moduleName=" + files(sourceSets.main.output.resourcesDir).asPath,
+                '--module', "$moduleName/$mainClassName"
+        ]
+        classpath = files()
+    }
+}
+
 
 //sourceSets.main.resources {
 //    srcDirs = ["src/main/java"]; //assume that your java classes are inside this path
