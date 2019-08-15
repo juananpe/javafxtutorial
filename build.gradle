@@ -19,7 +19,7 @@ version = '0.0.1'
 group = 'fi.pelam.gradlejavafxhelloworldapp'
 
 // ext.moduleName = 'gradlejavafxhelloworld'
-mainClassName = "fi.pelam.gradlejavafxhelloworldapp.ImageViewExperiments"
+mainClassName = "$moduleName/fi.pelam.gradlejavafxhelloworldapp.ImageViewExperiments"
 
 
 javafx {
@@ -37,7 +37,7 @@ run {
         jvmArgs = [
                 '--module-path', classpath.asPath,
                 '--patch-module', "$moduleName=" + files(sourceSets.main.output.resourcesDir).asPath,
-                '--module', "$moduleName/$mainClassName"
+                '--module', "$mainClassName"
         ]
         classpath = files()
     }
