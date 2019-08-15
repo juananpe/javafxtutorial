@@ -4,3 +4,7 @@
     -fx-border-radius: 5;
     -fx-padding: 3 6 6 6;
 }
+
+#button1 {
+    -fx-border-color: #ff0000; -fx-border-width: 5px;
+}
