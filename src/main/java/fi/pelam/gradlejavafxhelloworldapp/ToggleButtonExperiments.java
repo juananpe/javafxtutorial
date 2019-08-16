@@ -1,6 +1,8 @@
 package fi.pelam.gradlejavafxhelloworldapp;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
@@ -28,6 +30,12 @@ public class ToggleButtonExperiments extends Application  {
         toggleButton3.setToggleGroup(toggleGroup);
         toggleButton4.setToggleGroup(toggleGroup);
 
+        toggleButton1.setOnAction(actionEventEventHandler(toggleGroup));
+        toggleButton2.setOnAction(actionEventEventHandler(toggleGroup));
+        toggleButton3.setOnAction(actionEventEventHandler(toggleGroup));
+        toggleButton4.setOnAction(actionEventEventHandler(toggleGroup));
+
+
         HBox hbox = new HBox(toggleButton1, toggleButton2, toggleButton3, toggleButton4);
 
 
@@ -35,6 +43,14 @@ public class ToggleButtonExperiments extends Application  {
         primaryStage.setScene(scene);
         primaryStage.show();
 
+    }
+
+    private EventHandler<ActionEvent> actionEventEventHandler(ToggleGroup toggleGroup) {
+        return event -> {
+            ToggleButton selectedToggleButton =
+                (ToggleButton) toggleGroup.getSelectedToggle();
+            System.out.println(selectedToggleButton);
+        };
     }
 
     public static void main(String[] args) {
