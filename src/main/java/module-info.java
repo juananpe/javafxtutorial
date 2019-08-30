@@ -4,5 +4,5 @@ module gradlejavafxhelloworld {
     requires javafx.fxml;
     requires javafx.swing;
   requires javafx.web;
-  exports fi.pelam.gradlejavafxhelloworldapp;
+  exports ehu.isad.gradlejavafxhelloworldapp;
 }

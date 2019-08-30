@@ -16,10 +16,10 @@ sourceCompatibility = 11
 targetCompatibility = 11
 
 version = '0.0.1'
-group = 'fi.pelam.gradlejavafxhelloworldapp'
+group = 'ehu.isad.gradlejavafxhelloworldapp'
 
 // ext.moduleName = 'gradlejavafxhelloworld'
-mainClassName = "$moduleName/fi.pelam.gradlejavafxhelloworldapp.LineChartExperiments"
+mainClassName = "$moduleName/ehu.isad.gradlejavafxhelloworldapp.TableViewExample"
 
 
 javafx {
