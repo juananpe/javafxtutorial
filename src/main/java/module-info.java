@@ -3,5 +3,6 @@ module gradlejavafxhelloworld {
     requires javafx.graphics;
     requires javafx.fxml;
     requires javafx.swing;
-    exports fi.pelam.gradlejavafxhelloworldapp;
+  requires javafx.web;
+  exports fi.pelam.gradlejavafxhelloworldapp;
 }

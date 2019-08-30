@@ -19,12 +19,12 @@ version = '0.0.1'
 group = 'fi.pelam.gradlejavafxhelloworldapp'
 
 // ext.moduleName = 'gradlejavafxhelloworld'
-mainClassName = "$moduleName/fi.pelam.gradlejavafxhelloworldapp.ScrollPaneExample"
+mainClassName = "$moduleName/fi.pelam.gradlejavafxhelloworldapp.WebViewExample"
 
 
 javafx {
     version = "12"
-    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.swing']
+    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.swing', 'javafx.web']
 }
 
 repositories {
