@@ -1,6 +1,7 @@
 # gradle-javafx-hello-world-app
 
-An example of how to set up Java 12, JavaFX and Gradle application.
+An example of how to set up Java 12, JavaFX and Gradle application. Original code on:
+https://github.com/pelamfi/gradle-javafx-hello-world-app
 
 ## Features:
 
@@ -8,6 +9,7 @@ An example of how to set up Java 12, JavaFX and Gradle application.
   * Able to build a working runnable distribution zip file (Windows to be tested)
   * Able to open and run in IntelliJ without additional configuration
   * Able to run with from command line
+  * Able to properly load resources from resources/ folder
 
 ## Gradle Commands
 run in place:
