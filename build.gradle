@@ -19,7 +19,7 @@ version = '0.0.1'
 group = 'fi.pelam.gradlejavafxhelloworldapp'
 
 // ext.moduleName = 'gradlejavafxhelloworld'
-mainClassName = "$moduleName/fi.pelam.gradlejavafxhelloworldapp.TitledPaneExample"
+mainClassName = "$moduleName/fi.pelam.gradlejavafxhelloworldapp.AccordionExample"
 
 
 javafx {
