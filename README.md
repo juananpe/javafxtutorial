@@ -1,4 +1,9 @@
-# gradle-javafx-hello-world-app
+# JavaFX Tutorials code
+
+
+https://code.makery.ch/library/javafx-tutorial/part1/
+
+http://tutorials.jenkov.com/javafx/
 
 An example of how to set up Java 12, JavaFX and Gradle application. Original code on:
 https://github.com/pelamfi/gradle-javafx-hello-world-app
