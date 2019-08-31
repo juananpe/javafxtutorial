@@ -19,7 +19,7 @@ version = '0.0.1'
 group = 'ehu.isad.gradlejavafxhelloworldapp'
 
 // ext.moduleName = 'gradlejavafxhelloworld'
-mainClassName = "$moduleName/ehu.isad.gradlejavafxhelloworldapp.AccordionExample"
+mainClassName = "$moduleName/ehu.isad.gradlejavafxhelloworldapp.MainApp"
 
 
 javafx {
@@ -31,18 +31,16 @@ repositories {
     mavenCentral()
 }
 
+
 run {
     inputs.property('moduleName', moduleName)
     doFirst {
-        jvmArgs = [
-                '--module-path', classpath.asPath,
-                '--patch-module', "$moduleName=" + files(sourceSets.main.output.resourcesDir).asPath,
-                '--module', "$mainClassName"
-        ]
+        jvmArgs = jvmArgs.plus(['--module-path', classpath.asPath,
+                                '--patch-module', "$moduleName=" + files(sourceSets.main.output.resourcesDir).asPath,
+                                '--module', "$mainClassName",
+        ])
         classpath = files()
     }
-    jvmArgs "-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005"
-    debug true
 }
 
 
