@@ -19,7 +19,7 @@ version = '0.0.1'
 group = 'ehu.isad.gradlejavafxhelloworldapp'
 
 // ext.moduleName = 'gradlejavafxhelloworld'
-mainClassName = "$moduleName/ehu.isad.gradlejavafxhelloworldapp.TableViewExample"
+mainClassName = "$moduleName/ehu.isad.gradlejavafxhelloworldapp.AccordionExample"
 
 
 javafx {
@@ -41,6 +41,8 @@ run {
         ]
         classpath = files()
     }
+    jvmArgs "-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005"
+    debug true
 }
 
 
