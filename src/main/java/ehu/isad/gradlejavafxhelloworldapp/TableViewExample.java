@@ -1,5 +1,6 @@
 package ehu.isad.gradlejavafxhelloworldapp;
 
+import ehu.isad.gradlejavafxhelloworldapp.model.Person;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;

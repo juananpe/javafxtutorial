@@ -1,4 +1,4 @@
-package ehu.isad.gradlejavafxhelloworldapp;
+package ehu.isad.gradlejavafxhelloworldapp.model;
 
 import java.time.LocalDate;
 
