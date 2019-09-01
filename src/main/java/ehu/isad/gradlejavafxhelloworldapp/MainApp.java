@@ -1,6 +1,8 @@
 package ehu.isad.gradlejavafxhelloworldapp;
 
+import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.io.InputStream;
 
 import ehu.isad.gradlejavafxhelloworldapp.controller.PersonEditDialogController;
 import ehu.isad.gradlejavafxhelloworldapp.controller.PersonOverviewController;
@@ -8,12 +10,16 @@ import ehu.isad.gradlejavafxhelloworldapp.model.Person;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+
+import javax.imageio.ImageIO;
 
 public class MainApp extends Application {
 
@@ -51,9 +57,15 @@ public class MainApp extends Application {
   }
 
   @Override
-  public void start(Stage primaryStage) {
+  public void start(Stage primaryStage) throws IOException {
     this.primaryStage = primaryStage;
     this.primaryStage.setTitle("AddressApp");
+
+
+    InputStream is = getClass().getResourceAsStream("/address_book.png");
+    BufferedImage reader = ImageIO.read(is);
+    Image image = SwingFXUtils.toFXImage(reader,null);
+    this.primaryStage.getIcons().add(image);
 
     initRootLayout();
     showPersonOverview();
