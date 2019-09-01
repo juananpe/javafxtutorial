@@ -1,8 +1,10 @@
 package ehu.isad.gradlejavafxhelloworldapp;
 
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URL;
 
 import ehu.isad.gradlejavafxhelloworldapp.controller.PersonEditDialogController;
 import ehu.isad.gradlejavafxhelloworldapp.controller.PersonOverviewController;
@@ -20,6 +22,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import javax.imageio.ImageIO;
+import javax.swing.*;
 
 public class MainApp extends Application {
 
@@ -62,10 +65,17 @@ public class MainApp extends Application {
     this.primaryStage.setTitle("AddressApp");
 
 
+    URL iconURL = getClass().getResource("/address_book.png");
+    java.awt.Image image = new ImageIcon(iconURL).getImage();
+    Taskbar taskbar=Taskbar.getTaskbar();
+    taskbar.setIconImage(image);
+
+
     InputStream is = getClass().getResourceAsStream("/address_book.png");
     BufferedImage reader = ImageIO.read(is);
-    Image image = SwingFXUtils.toFXImage(reader,null);
-    this.primaryStage.getIcons().add(image);
+    Image imagefx = SwingFXUtils.toFXImage(reader, null);
+    this.primaryStage.getIcons().add(imagefx);
+
 
     initRootLayout();
     showPersonOverview();
@@ -149,6 +159,7 @@ public class MainApp extends Application {
       return false;
     }
   }
+
   /**
    * Returns the main stage.
    *
