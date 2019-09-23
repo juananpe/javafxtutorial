@@ -13,40 +13,8 @@ import java.util.Map;
 public class ComboBoxExperiments extends Application  {
 
     @Override
-    public void init() throws Exception {
-        super.init();
-
-        System.out.println("init()");
-        Parameters parameters = getParameters();
-
-        Map<String, String> namedParameters = parameters.getNamed();
-
-        System.out.println(namedParameters.get("agurra"));
-
-        List<String> rawArguments = parameters.getRaw();
-        List<String> unnamedParameters = parameters.getUnnamed();
-
-        System.out.println("\nnamedParameters -");
-        for (Map.Entry<String,String> entry : namedParameters.entrySet()) {
-            System.out.println(entry.getKey() + " : " + entry.getValue());
-        }
-
-        System.out.println("\nrawArguments -");
-        for(String raw : rawArguments) {
-            System.out.println(raw);
-        }
-
-        System.out.println("\nunnamedParameters -");
-        for(String unnamed : unnamedParameters) {
-            System.out.println(unnamed);
-        }
-    }
-
-
-    @Override
     public void start(Stage primaryStage) throws Exception {
 
-        System.out.println(getParameters().getNamed().toString());
         primaryStage.setTitle("ComboBox Experiment 1");
 
         ComboBox comboBox = new ComboBox();
